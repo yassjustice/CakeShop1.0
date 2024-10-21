@@ -1,0 +1,99 @@
+/* AboutUsSection.css */
+
+.about-us-section {
+    position: relative;
+    width: 100%;
+    height: 1024px;
+    /* left: 0px;
+    top: 1024px; */
+    background: url(../assets/aboutBackImage.jpeg) no-repeat center center; /* Importing the background image */
+    background-size: cover; /* Ensures the background image covers the section */
+}
+
+.about-us-title {
+    position: absolute;
+    width: 633px;
+    height: 171px;
+    left: 79px;
+    top: 174px;
+    font-family: "Playfair Display", serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 128px;
+    line-height: 171px; /* identical to box height */
+    text-align: center;
+    color: #1a1d26;
+    text-shadow: 0px 6px 6px rgba(0, 0, 0, 0.44);
+    padding: 10px;
+    margin: 10px;
+    /* 
+    position: absolute;
+  width: 633px;
+  height: 171px;
+  left: 79px;
+  top: 174px;
+  font-family: 'Playfair Display', serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 128px;
+  line-height: 171px;
+  text-align: center;
+  color: #1A1D26;
+  text-shadow: 0px 6px 6px rgba(0, 0, 0, 0.44);
+  backdrop-filter: blur(70.5px);
+  padding: 10px;
+  margin: 10px;
+    */
+}
+
+.rectangleAbout {
+    position: absolute;
+    width: 80vw;
+    height: min-content;
+    left: 122px;
+    top: 383px;
+    background: rgba(255, 255, 255, 0.37);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin: 10px; */
+    /*
+position: relative;
+  width: 1109px;
+  height: 560px;
+  left: 122px;
+  top: 383px;
+  background: rgba(255, 255, 255, 0.37);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+    */
+}
+
+.about-us-text {
+    /* position: absolute; */
+    /* width: 1173px;
+    height: 598px;  */
+    left: 159px;
+    top: 406px;
+    font-family: "Playfair Display", serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 85px;
+    color: #070707;
+    margin: 40px;
+    /* padding: 20px; */
+
+    /*
+    font-family: 'Playfair Display', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 85px;
+  color: #070707;
+  margin: 40px;
+  padding: 20px;
+    */
+}

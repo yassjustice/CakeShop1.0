@@ -1,0 +1,127 @@
+/* HeroSection.css */
+
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 1024px;
+    background-image: url("../assets/BackGHero.jpeg");
+    background-size: cover; /* Ensures the background covers the entire page */
+    background-position: center;
+    background-repeat: no-repeat;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column layout */
+    grid-template-rows: repeat(4, auto); /* Four rows for text elements */
+    position: absolute;
+    top: 4%; /* Adjusted for fixed header height */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%);
+}
+
+.life,
+.celebrate,
+.with {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 90px; /* Set default font size */
+    line-height: 202.03%;
+    color: #ffffff;
+    text-align: center;
+    margin: 0; /* Remove default margin */
+    position: absolute; /* Position absolutely for layout control */
+}
+
+.celebrate {
+    top: 10vh; /* Position at the top */
+    left: 18vw;
+}
+
+.life {
+    top: 25vh; /* Adjust position */
+    left: 34vw;
+}
+
+.with {
+    top: 40vh; /* Adjust position */
+    left: 34vw;
+}
+
+.every-bite {
+    position: absolute;
+    width: 728px;
+    height: 228px;
+    left: 15vw; /* Aligns with your provided position */
+    top: 45vh; /* Provided top position */
+    font-family: "Playfair Display", serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 90px; /* Updated to 128px */
+    line-height: 202.03%; /* Maintain line height */
+    color: #ffffff; /* Default color */
+    text-align: left; /* Align text to the left to prevent line breaks */
+}
+
+.every {
+    color: rgba(6, 6, 6, 0.63); /* Dark color for "Every" */
+}
+
+.bite {
+    color: #ffffff; /* White for "Bite!" */
+}
+
+.cta-button {
+    position: absolute;
+    width: 373.5px;
+    height: 121.5px;
+    /* left: 15%; 
+    top: 70%;  */
+    /* left: 20vw; 
+    top: 70vh;  */
+    left: 21.53vw;
+    top: 110vh;
+
+    display: flex;
+    align-items: center;
+    transform: translateX(-50%); /* Center horizontally */
+}
+
+/*  
+
+
+position: absolute;
+width: 373.5px;
+height: 121.5px;
+left: 310px;
+top: 797px;
+
+
+*/
+
+.rectangle {
+    box-sizing: border-box;
+    width: 366px;
+    height: 112.5px;
+    background: linear-gradient(
+        18.84deg,
+        rgba(255, 255, 255, 0.6) 16.62%,
+        rgba(153, 153, 153, 0) 88.48%
+    );
+    border: 3px solid #ffffff;
+    border-radius: 93px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cta-text {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 46.5px;
+    line-height: 202.03%;
+    color: #ffffff;
+}

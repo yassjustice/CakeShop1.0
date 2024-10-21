@@ -1,0 +1,117 @@
+.footer {
+    height: 1024px;
+    background-image: url("../assets/bgFooter2.jpeg");
+    background-size: cover; /* Ensures the background covers the entire page */
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: end;
+}
+
+.footer_rectangle {
+    background-color: #f8f8f8;
+    padding: 2vh 5vw;
+    height: 300px;
+    z-index: 2;
+    padding: 30px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 2vh;
+    border-bottom: 1px solid #ddd;
+}
+
+.footer-item {
+    border-right: 1px solid #ddd;
+    padding-right: 4vw;
+    border-left: 1px solid #ddd;
+    padding-left: 4vw;
+    width: 24vw;
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 40px;
+    /* text-align: center; */
+    color: #1a1d26;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+}
+.footerImage {
+}
+.footerSpanTop {
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 2vh;
+}
+
+.footer-section {
+  text-align: center;
+  font-size: 1.8vh;
+  color: #333;
+  border-right: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  padding-right: 1vw;
+  padding-left: 1vw;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto 1fr;
+}
+
+.footer-section h3 {
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 60px;
+    text-align: center;
+
+    color: #1a1d26;
+}
+
+.footer-section p {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 120%;
+    /* or 36px */
+    display: flex;
+    align-items: center;
+
+    color: #757575;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 120%;
+  display: flex;
+  flex-direction: column;
+  color: #757575;
+  justify-content: space-evenly;
+}
+
+.footer-section ul li {
+    margin: 0.5vh 0;
+}
+
+.logo-section img {
+    width: 14vw;
+    height: auto;
+    align-self: flex-start;
+  justify-self: center;
+}
+
+.logo-section p {
+    margin-top: 9vh;
+}
