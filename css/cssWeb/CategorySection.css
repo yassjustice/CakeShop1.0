@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 20px;
-    background-image: url("../assets/backGCat.jpeg");
+    background-image: url("../../assets/backGCat.jpeg");
     background-size: cover; /* Ensures the background covers the entire page */
     background-position: center;
     background-repeat: no-repeat;

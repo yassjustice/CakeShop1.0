@@ -1,12 +1,12 @@
 import React from 'react';
-import '../css/TestimonialSection.css';
+import '../../css/cssWeb/TestimonialSection.css';
 import { Asset } from 'expo-asset';
 
 const TestimonialSection = ({id}) => {
-  const heart1 = Asset.fromModule(require('../assets/Vector.png')).uri;
-  const heart2 = Asset.fromModule(require('../assets/Vector-1.png')).uri;
-  const heart3 = Asset.fromModule(require('../assets/Vector-2.png')).uri;
-  const heart4 = Asset.fromModule(require('../assets/Vector-3.png')).uri;
+  const heart1 = Asset.fromModule(require('../../assets/Vector.png')).uri;
+  const heart2 = Asset.fromModule(require('../../assets/Vector-1.png')).uri;
+  const heart3 = Asset.fromModule(require('../../assets/Vector-2.png')).uri;
+  const heart4 = Asset.fromModule(require('../../assets/Vector-3.png')).uri;
   
   return(
   <section id={id} className="testimonial-section">

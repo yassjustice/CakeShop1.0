@@ -9,8 +9,8 @@ import AboutUsSection from './AboutUsSection';
 
 
 const LandingPageWeb = () => {
-  const image = Asset.fromModule(require('../assets/cake-hero.jpg')).uri; // Use Expo's Asset
-  const imageAbout = Asset.fromModule(require('../assets/aboutBackImage.jpeg')).uri; // Use Expo's Asset
+  const image = Asset.fromModule(require('../../assets/cake-hero.jpg')).uri; // Use Expo's Asset
+  const imageAbout = Asset.fromModule(require('../../assets/aboutBackImage.jpeg')).uri; // Use Expo's Asset
   return (
     <div style={styles.page}>
       <Header />

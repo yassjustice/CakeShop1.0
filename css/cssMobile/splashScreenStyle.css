@@ -1,0 +1,58 @@
+.background {
+    flex: 1;
+    width: 100vw; /* Full screen width */
+    height: 100vh; /* Full screen height */
+}
+
+.heroTextContainer {
+    position: absolute;
+    width: 153px;
+    height: 296px;
+    left: 0;
+    top: 74px;
+}
+
+.celebrate, .life, .with, .every, .bite {
+    position: absolute;
+    font-family: 'Playfair Display', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 63px;
+    color: #FFFFFF;
+}
+
+.celebrate {
+    width: 153px;
+    height: 62px;
+    left: 2px;
+    top: 0px;
+}
+
+.life {
+    width: 71px;
+    height: 62px;
+    left: 46px;
+    top: 54px;
+}
+
+.with {
+    width: 71px;
+    height: 62px;
+    left: 26px;
+    top: 116px;
+}
+
+.every {
+    width: 116px;
+    height: 62px;
+    left: 16px;
+    top: 172px;
+}
+
+.bite {
+    width: 73px;
+    height: 62px;
+    left: 10px;
+    top: 234px;
+}

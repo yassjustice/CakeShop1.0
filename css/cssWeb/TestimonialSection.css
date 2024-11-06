@@ -10,7 +10,7 @@
     height: 134vh;
     left: 0;
     top: 0;
-    background: url("../assets/testimoBigPhoto.jpeg") no-repeat center
+    background: url("../../assets/testimoBigPhoto.jpeg") no-repeat center
         center/cover;
 }
 
@@ -71,7 +71,7 @@
 .ellipse-photo {
     width: 114px;
     height: 113px;
-    background: url("../assets/valerie.jpg") no-repeat center center/cover;
+    background: url("../../assets/valerie.jpg") no-repeat center center/cover;
     border-radius: 50%;
 }
 
@@ -85,7 +85,7 @@
     justify-content: center;
     align-items: center;
 
-    background: url("../assets/finalcadre.png") no-repeat center center/cover;
+    background: url("../../assets/finalcadre.png") no-repeat center center/cover;
 }
 
 .heart1 {

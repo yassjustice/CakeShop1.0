@@ -1,14 +1,14 @@
 import React from "react";
 import { Asset } from "expo-asset";
-import "../css/footerStyles.css";
+import "../../css/cssWeb/footerStyles.css";
 
 const Footer = ({id}) => {
     const cakeImage = Asset.fromModule(
-        require("../assets/ElegantCakeLogo.png")
+        require("../../assets/ElegantCakeLogo.png")
     ).uri;
-    const phoneIm = Asset.fromModule(require("../assets/Phone.png")).uri;
-    const twitterIm = Asset.fromModule(require("../assets/Twitter.png")).uri;
-    const clockIm = Asset.fromModule(require("../assets/Clock.png")).uri;
+    const phoneIm = Asset.fromModule(require("../../assets/Phone.png")).uri;
+    const twitterIm = Asset.fromModule(require("../../assets/Twitter.png")).uri;
+    const clockIm = Asset.fromModule(require("../../assets/Clock.png")).uri;
 
     return (
         <footer id={id} className="footer">

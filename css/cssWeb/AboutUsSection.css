@@ -6,7 +6,7 @@
     height: 1024px;
     /* left: 0px;
     top: 1024px; */
-    background: url(../assets/aboutBackImage.jpeg) no-repeat center center; /* Importing the background image */
+    background: url(../../assets/aboutBackImage.jpeg) no-repeat center center; /* Importing the background image */
     background-size: cover; /* Ensures the background image covers the section */
 }
 
