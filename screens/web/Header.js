@@ -7,7 +7,7 @@ import { Image, View, Text } from "react-native";
 
 const Header = () => {
     const logoImage = Asset.fromModule(
-        require("../../assets/ElegantCakeLogo.png")
+        require("../../assets/cakeLogo.png")
     ).uri;
     return (
         <header style={styles.headerContainer}>

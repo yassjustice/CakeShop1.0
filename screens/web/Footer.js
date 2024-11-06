@@ -4,7 +4,7 @@ import "../../css/cssWeb/footerStyles.css";
 
 const Footer = ({id}) => {
     const cakeImage = Asset.fromModule(
-        require("../../assets/ElegantCakeLogo.png")
+        require("../../assets/cakeLogo.png")
     ).uri;
     const phoneIm = Asset.fromModule(require("../../assets/Phone.png")).uri;
     const twitterIm = Asset.fromModule(require("../../assets/Twitter.png")).uri;

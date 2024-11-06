@@ -43,6 +43,7 @@ export default function BottomTabs() {
                 },
                 tabBarLabelStyle: { fontSize: 12 },
                 tabBarStyle: { height: 60, paddingBottom: 5 },
+                // tabBarStyle: { height: 60, paddingBottom: 5, backgroundColor: '#f0f0f0' }, 
             })}
         >
             <Tab.Screen

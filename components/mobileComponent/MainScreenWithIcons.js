@@ -1,8 +1,9 @@
 import React from "react";
 
-import logoDesign from "../../assets/ElegantCakeLogo.png"
+import logoDesign from "../../assets/cakeLogo.png"
+import logoDesign1 from "../../assets/favicon.png"
 
-import { View, TouchableOpacity, Text, ImageBackground } from "react-native";
+import { View, TouchableOpacity, Text, ImageBackground, Image } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 
@@ -15,12 +16,13 @@ import NotificationsScreen from "../../components/mobileComponent/NotificationsS
 
 import { Ionicons } from "@expo/vector-icons";
 import BottomTabs from "./BottomTabs";
-import { Image } from "react-native-web";
+import { Asset } from "expo-asset";
 
 const Drawer = createDrawerNavigator();
 
 // Main Screen with Burger and Notification Icons
 export default function MainScreenWithIcons() {
+    const logo1 = Asset.fromModule(require('../../assets/cakeLogo.png')).uri;
     return (
         <NavigationContainer independent={true}>
             <Drawer.Navigator
@@ -29,12 +31,17 @@ export default function MainScreenWithIcons() {
                     headerLeft: () => (
                         // Placeholder for the logo
                         <View style={{ paddingLeft: 15 }}>
-                            <Text style={{ fontSize: 18, fontWeight: "bold" }}>
-                                Logo
-                            </Text>
-                            {/* <ImageBackground ></ImageBackground> */}
-                            {/* <Image source={logoDesign}></Image> */}
-                        </View>
+                        <Image
+                            source={logoDesign}
+                            style={{
+                                width: 100, // adjust width to fit header
+                                height: 100, // adjust height to keep aspect ratio
+                                resizeMode: "contain",
+                                // padding: 10, 
+                                // margin: 10,
+                            }}
+                        />
+                    </View>
                     ),
                     headerRight: () => (
                         <View
@@ -48,7 +55,7 @@ export default function MainScreenWithIcons() {
                             >
                                 <Ionicons
                                     name="notifications-outline"
-                                    size={24}
+                                    size={29}
                                     color="black"
                                     style={{ marginRight: 15 }}
                                 />
@@ -59,13 +66,18 @@ export default function MainScreenWithIcons() {
                             >
                                 <Ionicons
                                     name="menu-outline"
-                                    size={24}
+                                    size={29}
                                     color="black"
                                 />
                             </TouchableOpacity>
                         </View>
                     ),
                     headerTitle: "",
+                    headerStyle: {
+                        backgroundColor: "#FFF", // Set the background color of the top bar
+                        height: 100, // Adjust the height of the header
+                        shadowOpacity: 0, // Remove any shadow if you want a flat header
+                      },
                 })}
             >
                 <Drawer.Screen
