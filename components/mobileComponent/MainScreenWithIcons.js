@@ -74,7 +74,7 @@ export default function MainScreenWithIcons() {
                     ),
                     headerTitle: "",
                     headerStyle: {
-                        backgroundColor: "#FFF", // Set the background color of the top bar
+                        backgroundColor: "white", 
                         height: 100, // Adjust the height of the header
                         shadowOpacity: 0, // Remove any shadow if you want a flat header
                       },
