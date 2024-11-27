@@ -1,6 +1,8 @@
 {
   "expo": {
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "name": "CakeShopApp1",
     "slug": "CakeShopApp1",
     "version": "1.0.0",
@@ -19,7 +21,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.yassirhakimi.CakeShopApp1"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -27,6 +30,11 @@
     "plugins": [
       "expo-asset",
       "expo-font"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "c0908b1b-7ee0-420d-be14-79d31144e59a"
+      }
+    }
   }
 }

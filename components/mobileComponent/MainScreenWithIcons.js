@@ -1,9 +1,15 @@
 import React from "react";
 
-import logoDesign from "../../assets/cakeLogo.png"
-import logoDesign1 from "../../assets/favicon.png"
+import logoDesign from "../../assets/cakeLogo.png";
+import logoDesign1 from "../../assets/favicon.png";
 
-import { View, TouchableOpacity, Text, ImageBackground, Image } from "react-native";
+import {
+    View,
+    TouchableOpacity,
+    Text,
+    ImageBackground,
+    Image,
+} from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 
@@ -17,36 +23,82 @@ import NotificationsScreen from "../../components/mobileComponent/NotificationsS
 import { Ionicons } from "@expo/vector-icons";
 import BottomTabs from "./BottomTabs";
 import { Asset } from "expo-asset";
+import CustomOrderScreen from "./CustomOrderScreen";
+import CartListScreen from "./CartListScreen";
+import { useCart } from "../../context/CartContext";
+import CategoryPage from "../../screens/mobile/CategoryScreenList";
 
 const Drawer = createDrawerNavigator();
 
 // Main Screen with Burger and Notification Icons
 export default function MainScreenWithIcons() {
-    const logo1 = Asset.fromModule(require('../../assets/cakeLogo.png')).uri;
+    const logo1 = Asset.fromModule(require("../../assets/cakeLogo.png")).uri;
+    const { cart } = useCart(); // Access cart items from the context
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0); // Calculate total items in the cart
     return (
-        <NavigationContainer independent={true}>
+        // <NavigationContainer 
+        // independent={true}
+        // >
             <Drawer.Navigator
                 initialRouteName="MainTabs"
                 screenOptions={({ navigation }) => ({
                     headerLeft: () => (
                         // Placeholder for the logo
                         <View style={{ paddingLeft: 15 }}>
-                        <Image
-                            source={logoDesign}
-                            style={{
-                                width: 100, // adjust width to fit header
-                                height: 100, // adjust height to keep aspect ratio
-                                resizeMode: "contain",
-                                // padding: 10, 
-                                // margin: 10,
-                            }}
-                        />
-                    </View>
+                            <Image
+                                source={logoDesign}
+                                style={{
+                                    width: 100, // adjust width to fit header
+                                    height: 100, // adjust height to keep aspect ratio
+                                    resizeMode: "contain",
+                                    // padding: 10,
+                                    // margin: 10,
+                                }}
+                            />
+                        </View>
                     ),
                     headerRight: () => (
                         <View
                             style={{ flexDirection: "row", paddingRight: 10 }}
                         >
+                            {/* Cart Icon */}
+                            <TouchableOpacity
+                                onPress={() =>
+                                    navigation.navigate("CartList")
+                                }
+                            >
+                                <Ionicons
+                                    name="cart"
+                                    size={29}
+                                    color="black"
+                                    style={{ marginRight: 15 }}
+                                />
+                                                                    {totalItems > 0 && (
+                                        <View
+                                            style={{
+                                                position: "absolute",
+                                                top: -5,
+                                                right: 7,
+                                                backgroundColor: "#4CAF50", // Subtle green color
+                                                borderRadius: 10,
+                                                width: 20,
+                                                height: 20,
+                                                justifyContent: "center",
+                                                alignItems: "center",
+                                            }}
+                                        >
+                                            <Text
+                                                style={{
+                                                    color: "white",
+                                                    fontSize: 12,
+                                                    fontWeight: "bold",
+                                                }}
+                                            >
+                                                {totalItems}
+                                            </Text>
+                                        </View>
+                                    )}
+                            </TouchableOpacity>
                             {/* Notification Icon */}
                             <TouchableOpacity
                                 onPress={() =>
@@ -74,10 +126,10 @@ export default function MainScreenWithIcons() {
                     ),
                     headerTitle: "",
                     headerStyle: {
-                        backgroundColor: "white", 
+                        backgroundColor: "white",
                         height: 100, // Adjust the height of the header
                         shadowOpacity: 0, // Remove any shadow if you want a flat header
-                      },
+                    },
                 })}
             >
                 <Drawer.Screen
@@ -93,7 +145,28 @@ export default function MainScreenWithIcons() {
                 <Drawer.Screen name="Contact Us" component={ContactUsScreen} />
                 <Drawer.Screen name="Agreements" component={AgreementsScreen} />
                 <Drawer.Screen name="Policies" component={PoliciesScreen} />
+                <Drawer.Screen
+                    name="CustomOrderScreen"
+                    component={CustomOrderScreen}
+                    options={{
+                        drawerItemStyle: { display: "none" }, // Hides the screen from the drawer menu
+                    }}
+                />
+                <Drawer.Screen
+                    name="CartList"
+                    component={CartListScreen}
+                    options={{
+                        drawerItemStyle: { display: "none" }, // Hides the screen from the drawer menu
+                    }}
+                />
+                {/* <Drawer.Screen
+                    name="CategoryScreenList"
+                    component={CategoryPage}
+                    options={{
+                        drawerItemStyle: { display: "none" }, // Hides the screen from the drawer menu
+                    }}
+                /> */}
             </Drawer.Navigator>
-        </NavigationContainer>
+        // </NavigationContainer>
     );
 }

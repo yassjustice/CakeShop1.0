@@ -10,11 +10,11 @@ import * as SplashScreen1 from "expo-splash-screen";
 import { LinearGradient } from "expo-linear-gradient";
 
 export default function SplashScreen({ navigation }) {
-    useEffect(() => {
-        // setTimeout(() => {
-        //   navigation.replace('Main');  // Navigates to the Home after 3 seconds
-        // }, 3000);
-    }, []);
+    // useEffect(() => {
+    //     setTimeout(() => {
+    //       navigation.replace('Main');  // Navigates to the Home after 3 seconds
+    //     }, 5000);
+    // }, []);
 
     const [fontsLoaded, setFontsLoaded] = useState(false);
     
